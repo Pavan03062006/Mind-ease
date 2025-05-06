@@ -60,7 +60,7 @@ A basic example setup (save this as `index.html`):
 ## Screenshots
 
 ### Desktop View
-![Desktop Screenshot](assets/screenshot1.png)
+![Desktop Screenshot](Screenshot 2025-05-06 182947.png)
 
 ## 🤝 Contributing
 
