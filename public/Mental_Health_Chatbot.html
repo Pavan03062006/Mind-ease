@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindEase Chatbot</title>
+    <link rel="stylesheet" href="Mental_Health_Chatbot.css">
+</head>
+<body>
+     <div class="main-container">           
+        <h1 id="chatbot-heading" class="fade-in">MindEase Chatbot</h1>
+       <div id="prompts" class="prompts-container">
+            <h3>Try these prompts:</h3>
+            <ul>
+                <li onclick="setPrompt('hello')">Hello</li>
+                <li onclick="setPrompt('sad')">I am feeling sad</li>
+                <li onclick="setPrompt('happy')">I am feeling happy</li>
+                <li onclick="setPrompt('anxious')">I am feeling anxious</li>
+                <li onclick="setPrompt('alone')">I feel alone</li>
+                <li onclick="setPrompt('thanks')">Thanks!</li>
+                <li onclick="setPrompt('bye')">Goodbye</li>
+                <li onclick="setPrompt('help')">I need help</li>
+            </ul>
+          <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>681956fa598776147263a66e,681956d5c99a95faed14e783</script>
+        </div>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <br>
+            <button id="send-btn"><span></span> 🚀</button>
+        </div>
+    </div>
+    <script src="Mental_Health_Chatbot.js"></script>
+</body>
+</html>

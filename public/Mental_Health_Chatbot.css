@@ -1,0 +1,229 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and main container */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-container {
+    text-align: center; /* Center-align the heading */
+}
+
+#chatbot-heading {
+    font-size: 2.5rem;
+    color: #4CAF50;  /* Green color for heading */
+    margin-bottom: 20px;
+    opacity: 0; /* Initial state of heading */
+    animation: fadeInHeading 2s forwards; /* Animation for the heading */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3), 0 0 25px #4CAF50, 0 0 5px #4CAF50; /* Outline effect */
+}
+
+/* Heading animation */
+@keyframes fadeInHeading {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#prompts-list li {
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Prompts section */
+.prompts-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #333;  /* Dark background for prompts */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prompts-container h3 {
+    font-size: 1.5rem;
+    color: #fff;  /* White text for prompts */
+}
+
+.prompts-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.prompts-container ul li {
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #444;  /* Darker background for each prompt */
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prompts-container ul li:hover {
+    background-color: #555;  /* Lighter on hover */
+}
+
+/* Chat container */
+.chat-container {
+    background: rgba(40, 40, 40, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Chat box styles */
+#chat-box {
+    background-color: #1a1a1a;
+    border: 2px solid #00ffd5;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 900px;
+    height: 600px; /* Ensures a fixed height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 25px;
+    box-shadow: 0 0 25px rgba(0, 255, 213, 0.2);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+.chat-box .message {
+    padding: 12px 18px;
+    border-radius: 16px;
+    max-width: 80%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in-out;
+    opacity: 0.95;
+}
+
+.chat-box .user {
+    background-color: #333;
+    color: #fff;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.chat-box .bot {
+    background-color: #222;
+    color: #00ffd5;
+    align-self: flex-start;
+    text-align: left;
+}
+#chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+#chat-box::-webkit-scrollbar-thumb {
+    background-color: #00ffd5;
+    border-radius: 10px;
+}
+
+
+/* Message animation */
+@keyframes fadeInMessage {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input container */
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;  /* Dark input container */
+    border-top: 1px solid #444;
+}
+
+/* Input field */
+#user-input {
+    padding: 10px;
+    width: 90%;
+    max-width: 600px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px #00ffd5;
+    background-color: #222;
+    color: #fff;
+}
+/* Send button */
+#send-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#send-btn:hover {
+    background-color: #45a049;
+}
+
+/* Hover Effect for Messages */
+.chat-box .message {
+    transition: all 0.3s ease-in-out;
+}
+
+.chat-box .message:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar Styling */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: #777;
+    border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+}
