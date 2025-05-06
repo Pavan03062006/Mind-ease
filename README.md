@@ -57,6 +57,10 @@ A basic example setup (save this as `index.html`):
 3. Start chatting with MindEase!
 
 ---
+## Screenshots
+
+### Desktop View
+![Desktop Screenshot](assets/screenshot1.png)
 
 ## 🤝 Contributing
 
