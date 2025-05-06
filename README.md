@@ -62,13 +62,14 @@ A basic example setup (save this as `index.html`):
 ### Desktop View
 ![Desktop Screenshot](asset_1.png)
 
+---
 ## 🤝 Contributing
 
 Feel free to fork this project and improve the responses, UI, or add new features. Pull requests are welcome!
 ---
+
 ## 💬 Example Interaction
 
-```
 You: I'm feeling anxious.
 MindEase: It's okay to feel anxious sometimes. Want to talk more about what's making you feel that way?
 ```
